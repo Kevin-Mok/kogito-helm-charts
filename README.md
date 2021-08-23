@@ -10,7 +10,6 @@ following setup:
 kubectl create namespace kogito-helm
 git clone https://github.com/Kevin-Mok/kogito-helm-charts.git
 cd kogito-helm-charts
-export NODE_INTERNAL_IP=$(kubectl get nodes -o jsonpath='{ $.items[0].status.addresses[?(@.type=="InternalIP")].address }')
 kubectl config set-context --current --namespace=kogito-helm
 ```
 
